@@ -3,11 +3,11 @@ import { HydratedDocument } from 'mongoose';
 
 @Schema({
   timestamps: true,
-  collection: 'desp',
+  collection: 'description',
 })
-export class Desp {
+export class Desciption {
   @Prop({ required: true })
-  desp: string;
+  desciption: string;
 
   @Prop({ required: true })
   rate: number;
@@ -25,5 +25,5 @@ export class Desp {
   state: string;
 }
 
-export const DespSchema = SchemaFactory.createForClass(Desp);
-export type DespDocument = HydratedDocument<Desp>;
+export const DesciptionSchema = SchemaFactory.createForClass(Desciption);
+export type DesciptionDocument = HydratedDocument<Desciption>;

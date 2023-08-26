@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 
-export type DespDto = {
-  desp: string;
+export type DesciptionDto = {
+  description: string;
   rate: number;
   unit: string;
   category: string;
@@ -9,4 +9,4 @@ export type DespDto = {
   state: string;
 };
 
-export type Desp = DespDto & Document;
+export type Desp = DesciptionDto & Document;
