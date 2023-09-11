@@ -3,7 +3,7 @@ import { Desciption } from './Description.schema';
 import { DesciptionService } from './Description.service';
 import { DesciptionDto } from './Description.model';
 
-@Controller('desp')
+@Controller('description')
 export class DesciptionController {
   constructor(private desciptionService: DesciptionService) {}
 

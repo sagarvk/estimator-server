@@ -11,6 +11,12 @@ export class ProjectType {
 
   @Prop({ required: true })
   projectDescription: string;
+
+  @Prop({ required: true })
+  qualities: {
+    name: string;
+    rate: number;
+  }[];
 }
 
 export const ProjectTypeSchema = SchemaFactory.createForClass(ProjectType);

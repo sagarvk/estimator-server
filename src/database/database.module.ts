@@ -20,10 +20,6 @@ import {
   ProjectTypeSchema,
 } from './property-type/project-type.schema';
 
-import { QualityService } from './quality/Quality.service';
-import { QualityController } from './quality/Quality.controller';
-import { Quality, QualitySchema } from './quality/Quality.schema';
-
 @Module({
   imports: [
     MongooseModule.forFeature([
@@ -31,7 +27,6 @@ import { Quality, QualitySchema } from './quality/Quality.schema';
       { name: Desciption.name, schema: DesciptionSchema },
       { name: Master.name, schema: MasterSchema },
       { name: ProjectType.name, schema: ProjectTypeSchema },
-      { name: Quality.name, schema: QualitySchema },
     ]),
   ],
   controllers: [
@@ -39,21 +34,18 @@ import { Quality, QualitySchema } from './quality/Quality.schema';
     DesciptionController,
     MasterController,
     ProjectTypeController,
-    QualityController,
   ],
   providers: [
     ClientsService,
     DesciptionService,
     MasterService,
     ProjectTypeService,
-    QualityService,
   ],
   exports: [
     ClientsService,
     DesciptionService,
     MasterService,
     ProjectTypeService,
-    QualityService,
   ],
 })
 export class DatabaseModule {}
